@@ -18,23 +18,23 @@
         <h1 class="text-center">Bài 1: Quản lý tuyển sinh</h1>
         <div class="card d-block w-50 mx-auto">
             <div class="card-header bg-secondary text-white text-center">
-                <h3>Điểm chuẩn của hội đồng là 25</h3>
+                <input id="diemChuan" placeholder="Nhập điểm chuẩn" type="number">
             </div>
             <div class="card-body">
                 <input id="diemVan" class="form-control" placeholder="Nhập điểm môn Văn" type="number">
                 <input type="number" id="diemToan" placeholder="Nhập điểm môn Toan" class="form-control">
                 <input type="number" id="diemAnh" placeholder="Nhập điểm môn Anh" class="form-control">
-                <select id=”khu-vuc”>
+                <select class="form-control" id="khuVuc">
                     <option>Chọn Khu Vực</option>
-                    <option value=”A”>A</option>
-                    <option value=”B”>B</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
                     <option value="C">C</option>
                 </select>
 
-                <select id=”doi-tượng”>
+                <select class="form-control" id="doiTuong">
                     <option>Chọn đối tượng</option>
-                    <option value=”1”>1</option>
-                    <option value=”2”>2</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
 
@@ -43,35 +43,73 @@
                 <button id="btnTinhDiem" class="btn btn-success">
                     Tính điểm
                 </button>
-                <h3 id="ketQua">Kết Quả</h3>
+                <h3 class="alert alert-success" id="ketQua">Kết Quả</h3>
             </div>
         </div>
         <hr>
-        <h3>Bài 2: Tính tiền điện</h3>
-        <input id="hoTen" placeholder="Nhập họ tên" type="text">
-        <input id="soKW" placeholder="nhập số KW" type="number">
-        <br>
-        <button id="btn-tinh-tien-dien" class="btn btn-success">
-            Tính tiền điện
-        </button>
-        <div class="bg-danger">
-            <h3 id="ket-Qua-Dien">
-                ????
-            </h3>
+        <h3 class="text-center">Bài 2: Tính tiền điện</h3>
+        <div class="card d-block w-50 mx-auto">
+            <div class="card-header bg-secondary text-white text-center">
+                <input id="hoTen" placeholder="Nhập họ tên" type="text">
+            </div>
+            <div class="card-body">
+                <input id="soKW" placeholder="nhập số KW" type="number">
+            </div>
+            <div class="card-footer text-center">
+                <button id="btn-tinh-tien-dien" class="btn btn-success">
+                    Tính tiền điện
+                </button>
+                <h3 class="alert alert-success" id="ket-Qua-Dien">
+                    Tiền điện
 
+                </h3>
+
+            </div>
         </div>
 
         <hr>
-        <h3>Bài tập 3: Tính thuê thu nhập cá nhân</h3>
-        <input id="ho-ten" placeholder="nhập họ tên" type="text">
-        <input id="tong-thu-nhap" placeholder="tổng thu nhập năm" type="number">
-        <input id="nguoi-phu-thuoc" placeholder="số người phụ thuộc" type="text">
-        <br>
-        <button id="btn-tinh-thue" class="btn btn-success">
-            Tính tiền thuê
-        </button>
-        <div class="bg-danger">
-            <h3 id="res-3">????</h3>
+        <h3 class="text-center">Bài tập 3: Tính thuê thu nhập cá nhân</h3>
+        <div class="card d-block w-50 mx-auto">
+            <div class="card-header bg-secondary text-white text-center">
+                <input id="ho-ten" placeholder="nhập họ tên" type="text">
+            </div>
+            <div class="card-body">
+                <input id="tong-thu-nhap" placeholder="tổng thu nhập năm" type="number">
+                <input id="nguoi-phu-thuoc" placeholder="số người phụ thuộc" type="text">
+            </div>
+            <div class="card-footer text-center">
+                <button id="btn-tinh-thue" class="btn btn-success">
+                    Tính tiền thuê
+                </button>
+                <h3 class="alert alert-success" id="res-3">Tiền Thuế</h3>
+            </div>
+        </div>
+        <hr>
+        <h3>Bài tập 2: Tính tiền cáp</h3>
+        <div class="card d-block w-50 mx-auto">
+            <div class="card-header bg-secondary text-white text-center">
+                <h4>Tiền mạng</h4>
+
+            </div>
+            <div class="card-body">
+                <select name="" id="loaiKhachHang" class="form-control" onchange="anHien()">
+                    <option value="0">Chọn đối tượng khách hàng</option>
+                    <option value="1">Nhà dân</option>
+                    <option value="2">Doanh nghiệp</option>
+                </select>
+                <input type="text" name="" id="maKhacHang" class="form-control" placeholder="Nhập mã khách hàng">
+
+                <input type="number" id="soKenhCaoCap" class="form-control" placeholder="Số kênh cao cấp">
+
+                <input type="number" name="" id="soKetNoi" class="form-control" placeholder="Số kết nối"
+                    style="display: none ;">
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success" id="tinhTienCap">Tính tiền cáp</button>
+                <h3 class="alert alert-success" id="ketQuaCap">
+                    Tiền cáp
+                </h3>
+            </div>
         </div>
     </div>
 

@@ -1,9 +1,29 @@
-function tinhDiemTong(diemAnh, diemToan, diemVan, khuVuc, doiTuong) {
+function tinhDiemTong(diemAnh, diemToan, diemVan) {
     var output = 0;
-    output = diemAnh + diemToan + diemVan + khuVuc + doiTuong
-
+    output = diemAnh + diemToan + diemVan
     return output
-
+}
+function chonKhuVuc(khuVuc) {
+    var output = 0;
+    if (khuVuc === 'A') {
+        output = 2;
+    } else if (khuVuc === 'B') {
+        output = 1;
+    } else if (khuVuc === 'C') {
+        output = 0.5;
+    }
+    return output
+}
+function chonDoiTuong(doiTuong) {
+    var output = 0;
+    if (doiTuong === '1') {
+        output = 2.5;
+    } else if (doiTuong === '2') {
+        output = 1.5;
+    } else if (doiTuong === '3') {
+        output = 1;
+    }
+    return output
 }
 
 function tinhTienDien(soKW) {
@@ -47,4 +67,26 @@ function tinhThue(thuNhapChiuThue) {
     }
 
     return outputThue
+}
+
+
+function tienCapNhaDan(soKenhCaoCap) {
+    var output = 0;
+    const phiHoaDon = 4.5;
+    const phiDichVu = 20.5;
+    output = phiHoaDon + phiDichVu + soKenhCaoCap * 7.5;
+    return output
+}
+
+function tienCapDoanhNghiep(soKenhCaoCap, soKetNoi) {
+    var output = 0;
+    const phiHoaDon = 15;
+    var phiDichVu = 0;
+    if (soKetNoi <= 10) {
+        phiDichVu = 75;
+    } else {
+        phiDichVu = 75 + (soKetNoi - 10) * 5;
+    }
+    output = phiHoaDon + phiDichVu + soKenhCaoCap * 50;
+    return output
 }
